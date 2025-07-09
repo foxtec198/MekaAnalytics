@@ -1,6 +1,6 @@
 
 api = 'http://localhost:9560'
-// api = 'https://api.hubbix.com.br'
+api = 'https://api.hubbix.com.br'
 
 server = api + '/analytics/'
 unit_id = sessionStorage.getItem('unit_id')

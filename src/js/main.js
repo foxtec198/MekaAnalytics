@@ -20,7 +20,6 @@ async function get_analytics(client = '0'){
         req = await fetch(server + `?unit_id=${unit_id}`)
     }
     const res = await req.json()
-    console.log(res)
     const types = {
         "VIEW": 0,
         "CLICK": 0,

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meka - Analytics</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="shortcut icon" href="https://meka-h70c.onrender.com/src/img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body data-bs-theme="dark">
     <div class="container gap-2 py-3 d-flex flex-column">
@@ -14,20 +16,26 @@
             <div class="flex-grow-1" style="flex-basis: 200px;">
                 <img src="https://meka-h70c.onrender.com/src/img/logoAzul.svg" width="150vh" class="img-fluid logo">
             </div>
+            <span class="fs-4 fw-bold d-flex align-items-center gap-2"><i class="bi bi-person-circle"></i> <span id="name">[display_name]</span></span>
+        </section>
+
+        <section class="d-flex gap-2">
             <div class="form-floating flex-grow-1" style="flex-basis: 200px;">
                 <select class="form-control" id="clientes" aria-placeholder="Clientes">
-                    <option value="000">Selecionar Todos</option>
+                    <option value="0">Selecionar Todos</option>
                 </select>
                 <label for="clientes">Cliente</label>
             </div>
+            <button class="btn fs-4 btn-success btn-lg"><i class="bi bi-person-fill-add"></i></button>
         </section>
+
         <!-- https://uiverse.io/jamik-dev/chatty-walrus-78  https://uiverse.io/vinodjangid07/grumpy-mule-23 -->
         <!-- Status -->
         <section>
             <div class="d-flex flex-wrap gap-2">
                 <div class="card flex-grow-1 text-bg-danger" style="flex-basis: 200px;">
                     <div class="card-header">
-                        Visualizações
+                        <i class="bi bi-eye-fill"></i> Visualizações
                     </div>
                     <div class="card-body">
                         <span class="fw-bold fs-5" id="views">0</span>
@@ -35,7 +43,7 @@
                 </div>
                 <div class="card flex-grow-1 text-bg-success" style="flex-basis: 200px;">
                     <div class="card-header">
-                        Cliques Whatsapp
+                        <i class="bi bi-whatsapp"></i> Cliques Whatsapp
                     </div>
                     <div class="card-body">
                         <span class="fw-bold fs-5" id="clicks">0</span>
@@ -43,7 +51,7 @@
                 </div>
                 <div class="card flex-grow-1 text-bg-primary" style="flex-basis: 200px;">
                     <div class="card-header">
-                        Envio de Formularios
+                        <i class="bi bi-pen"></i> Envio de Formularios
                     </div>
                     <div class="card-body">
                         <span class="fw-bold fs-5" id="forms">0</span>
@@ -53,18 +61,23 @@
         </section>
 
         <!-- Graphs -->
-        <section>
-            <div class="d-flex" id="graph"></div>
-            <div class="d-flex" id="list"></div>
+        <section class="d-flex align-items-end flex-wrap-reverse gap-2">
+            <div class="d-flex flex-grow-1 card" style="flex-basis: 350px;" id="graph"></div>
+            <div class="d-flex flex-grow-1 card" style="flex-basis: 200px;">
+                <!-- <ul class="list-group">
+                    <li class="list-group-item">Teste</li>
+                </ul> -->
+            </div>
         </section>
     </div>
 
-    
+    <!-- Chartjs --> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="src/js/main.js"></script>
     <script>
         get_analytics()
         get_clients()
+        dash()
     </script>
 </body>
 </html>

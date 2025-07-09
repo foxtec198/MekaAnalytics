@@ -1,5 +1,6 @@
 
-api = 'http://localhost:9560'
+// api = 'http://localhost:9560'
+api = 'https://api.hubbix.com.br'
 server = api + '/analytics/'
 unit_id = sessionStorage.getItem('unit_id')
 display_name = sessionStorage.getItem('display_name')
@@ -43,7 +44,6 @@ async function get_clients(){
 } 
 
 // =========================== Triggers 
-
 const sel = document.getElementById('clientes')
 if(sel){
     sel.addEventListener('change', async function(e){

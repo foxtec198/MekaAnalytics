@@ -8,54 +8,39 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body data-bs-theme="dark">
-    <div class="container gap-2 py-3 d-flex flex-column">
+    <div class="container gap-2 py-3 d-flex justify-content-between h-100 flex-column align-items-center">
         <!-- Navbar -->
-        <section class="d-flex justify-content-between gap-5 flex-wrap">
+        <section class="d-flex align-self-start justify-content-between gap-5 flex-wrap">
             <div class="flex-grow-1" style="flex-basis: 200px;">
                 <img src="https://meka-h70c.onrender.com/src/img/logoAzul.svg" width="150vh" class="img-fluid logo">
             </div>
-            <div class="form-floating flex-grow-1" style="flex-basis: 200px;">
-                <select class="form-control" id="clientes" aria-placeholder="Clientes">
-                    <option>Selecionar Todos</option>
-                </select>
-                <label for="clientes">Cliente</label>
-            </div>
-        </section>
-        <!-- https://uiverse.io/jamik-dev/chatty-walrus-78  https://uiverse.io/vinodjangid07/grumpy-mule-23 -->
-        <!-- Status -->
-        <section>
-            <div class="d-flex flex-wrap gap-2">
-                <div class="card flex-grow-1 text-bg-danger" style="flex-basis: 200px;">
-                    <div class="card-header">
-                        Visualizações
-                    </div>
-                    <div class="card-body">
-                        <span class="fw-bold fs-5" id="views">0</span>
-                    </div>
-                </div>
-                <div class="card flex-grow-1 text-bg-success" style="flex-basis: 200px;">
-                    <div class="card-header">
-                        Cliques Whatsapp
-                    </div>
-                    <div class="card-body">
-                        <span class="fw-bold fs-5" id="clicks">0</span>
-                    </div>
-                </div>
-                <div class="card flex-grow-1 text-bg-primary" style="flex-basis: 200px;">
-                    <div class="card-header">
-                        Envio de Formularios
-                    </div>
-                    <div class="card-body">
-                        <span class="fw-bold fs-5" id="forms">0</span>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- Graphs -->
-        <section>
-            <div class="d-flex" id="graph"></div>
-            <div class="d-flex" id="list"></div>
+        <section class="d-flex flex-column rounded text-bg-light px-3 py-5">
+            <span class="fs-4 fw-bold">Seja bem vindo!</span>
+            <span class="fs-6">Realize login para continuar!</span>
+
+            <form id="loginForm" class="d-flex flex-column gap-2">
+                <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating">
+                        <input autofocus id="email" type="email" class="form-control" placeholder="Email" autocomplete="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating">
+                        <input id="pwd" type="password" class="form-control" placeholder="Senha" autocomplete="current-password" required>
+                        <label for="pwd">Senha</label>
+                    </div>
+                </div>
+                <button class="btn btn-dark w-100 mt-2" type="submit">Entrar</button>
+            </form>
+
+        </section>
+        <section class="d-flex">
+            <span class="text-center w-100">Desenvolvido por Guilherme Breve</span>
         </section>
     </div>
 

@@ -14,7 +14,7 @@
         <!-- Navbar -->
         <section class="d-flex justify-content-between gap-5 flex-wrap">
             <div class="flex-grow-1" style="flex-basis: 200px;">
-                <img src="https://meka-h70c.onrender.com/src/img/logoAzul.svg" width="150vh" class="img-fluid logo">
+                <img src="https://meka-h70c.onrender.com/src/img/logo.png" width="150vh" class="img-fluid">
             </div>
             <span class="fs-4 fw-bold d-flex align-items-center gap-2"><i class="bi bi-person-circle"></i> <span id="name">[display_name]</span></span>
         </section>
@@ -57,14 +57,30 @@
                         <span class="fw-bold fs-5" id="forms">0</span>
                     </div>
                 </div>
+                <div class="card flex-grow-1 text-bg-secondary" style="flex-basis: 200px;">
+                    <div class="card-header">
+                        <i class="bi bi-pen"></i> CPC/CPL
+                    </div>
+                    <div class="card-body">
+                        <span class="fw-bold fs-5" id="forms">0</span>
+                    </div>
+                </div>
+                <div class="card flex-grow-1 bg-warning" style="color: #333; flex-basis: 200px;">
+                    <div class="card-header">
+                        <i class="bi bi-pen"></i> Conversão
+                    </div>
+                    <div class="card-body">
+                        <span class="fw-bold fs-5" id="forms">0%</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Graphs -->
-        <section class="d-flex align-items-end flex-wrap-reverse gap-2">
+        <section class="d-flex h-100 flex-wrap-reverse gap-2">
             <div class="d-flex flex-grow-1 card" style="flex-basis: 350px;" id="graph"></div>
-            <div class="d-flex flex-grow-1 card" style="flex-basis: 200px;">
-                <ul class="list-group" id="listViews"></ul>
+            <div class="d-flex flex-grow-1 card" style="flex-basis: 200px; overflow-y: auto; max-height: 350px;">
+                <ul class="list-group list-group-hover" id="listViews"></ul>
             </div>
         </section>
     </div>
